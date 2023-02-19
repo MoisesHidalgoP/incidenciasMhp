@@ -1,0 +1,13 @@
+<h1 class="h1" style="text-align: center;">Gestión de Incidencias </h1>
+
+
+<ul *ngFor="let incidencia of listaIncidencias" class="list-group" style="text-align:left">
+    <br>
+    <div class="contenedor">
+        
+        <li routerLink="/gestionIncidencias/gestionIncidencias/{{incidencia.id}}" class="list-group-item" >
+            Lugar: {{incidencia.data.lugar}} <br>
+            Descripcion: {{incidencia.data.descripcion}} 
+        </li>
+    </div>
+</ul>

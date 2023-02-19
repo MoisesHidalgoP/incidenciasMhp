@@ -1,0 +1,51 @@
+<div class="container" >
+    <form [formGroup]="datosIncidencia" class="form-group container w-50 mt-3" >
+      <div class="form-group">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" formControlName="descripcion" placeholder="Descripcion" readonly onmousedown="return false;">
+      </div>
+
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        <input type="text" class="form-control" id="estado" formControlName="estado" placeholder="Estado">
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">Fecha</label>
+          <input type="text" class="form-control" id="fecha" formControlName="fecha" placeholder="Fecha" readonly onmousedown="return false;">
+          </div>
+
+          <div class="form-group">
+            <label for="lugar">Lugar</label>
+            <input type="text" class="form-control" id="lugar" formControlName="lugar" placeholder="Lugar" readonly onmousedown="return false;">
+            </div>
+
+            <div class="form-group">
+              <label for="persona">Persona</label>
+              <input type="text" class="form-control" id="persona" formControlName="persona" placeholder="Persona" readonly onmousedown="return false;">
+              </div>
+
+              <div class="form-group">
+                <label for="responsable">Responsable</label>
+                <input type="text" class="form-control" id="responsable" formControlName="responsable" placeholder="Responsable">
+                </div>
+
+                <div class="form-group">
+                  <label for="solucion">Solucion</label>
+                  <input type="text" class="form-control" id="solucion" formControlName="solucion" placeholder="Solucion">
+                  </div>
+
+            <br/>
+            <div class="form-group">
+                <label>Revisada</label>
+                <select class="form-control" formControlName="revisada">
+                    <option>false</option>             
+                    <option>true</option>
+                </select>
+                <!--<input class="form-control" formControlName="revisada">-->
+            </div>
+
+            <br/>
+            
+        </form>
+    </div>

@@ -1,0 +1,76 @@
+<h1 class="h1" style="text-align: center;">Revisión de incidencias</h1>
+
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FILTRAR POR</h4>
+<section class="header-section">
+
+    <mat-button-toggle-group [(value)]="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value=" ">Todas</mat-button-toggle>
+        <mat-button-toggle value="revisadas">Revisadas</mat-button-toggle>
+        <mat-button-toggle value="no revisadas">No revisidadas</mat-button-toggle>
+        </mat-button-toggle-group>
+
+</section>
+
+
+<h3 style="text-align:center"> Lista Incidencias
+    
+</h3>
+
+<br><br>
+<h3 style="text-align:center"><strong>Incidencias {{fontStyle}}</strong></h3>
+
+<table class="table table-Info table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Lugar</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Revisada</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="fontStyle == ' '">
+        <tr *ngFor="let incidencia of listaIncidencias; let i = index" routerLink="/revisionIncidencias/revisionIncidencias/{{incidencia.id}}">
+            <th scope="row">{{i + 1}}</th>
+            <td>
+                {{incidencia.data.lugar}}
+            </td>
+            <td>
+                {{incidencia.data.descripcion}} 
+            </td>
+            <td>
+                {{incidencia.data.revisada}}
+                
+            </td>
+        </tr>
+    </tbody>
+
+    <tbody *ngIf="fontStyle == 'revisadas'">
+        <tr *ngFor="let incidencia of listaIncidenciasRevisadas; let i = index" routerLink="/revisionIncidencias/revisionIncidencias/{{incidencia.id}}">
+            <th scope="row">{{i + 1}}</th>
+            <td>
+                {{incidencia.data.lugar}}
+            </td>
+            <td>
+                {{incidencia.data.descripcion}} 
+            </td>
+            <td>
+                {{incidencia.data.revisada}}
+            </td>
+        </tr>
+    </tbody>
+
+    <tbody  *ngIf="fontStyle == 'no revisadas'">
+        <tr *ngFor="let incidencia of listaIncidenciasNoRevisadas; let i = index" routerLink="/revisionIncidencias/revisionIncidencias/{{incidencia.id}}">
+            <th scope="row">{{i + 1}}</th>
+            <td>
+                {{incidencia.data.lugar}}
+            </td>
+            <td>
+                {{incidencia.data.descripcion}} 
+            </td>
+            <td>
+                {{incidencia.data.revisada}}
+            </td>
+        </tr>
+    </tbody>
+</table>

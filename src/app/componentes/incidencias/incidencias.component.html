@@ -1,0 +1,62 @@
+<h1 class="h1" style="text-align: center;">Incidencias</h1>
+
+<div class="container" >
+    <form [formGroup]="datosIncidencia" class="form-group container w-50 mt-3" >
+      <div class="form-group">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" formControlName="descripcion" placeholder="Descripcion">
+      </div>
+
+      <br/>
+
+      <div class="form-group">
+        <label for="estado">Estado</label>
+        <input type="text" class="form-control" id="estado" formControlName="estado" placeholder="Estado">
+        </div>
+        
+        <br/>
+
+        <div class="form-group">
+          <label for="fecha">Fecha</label>
+          <input type="text" class="form-control" id="fecha" formControlName="fecha" placeholder="Fecha">
+          </div>
+
+          <br/>
+
+          <div class="form-group">
+            <label for="lugar">Lugar</label>
+            <input type="text" class="form-control" id="lugar" formControlName="lugar" placeholder="Lugar">
+            </div>
+
+            <br/>
+
+            <div class="form-group">
+              <label for="persona">Persona</label>
+              <input type="text" class="form-control" id="persona" formControlName="persona" placeholder="Persona">
+              </div>
+
+              <br/>
+
+              
+
+                <div class="form-group">
+                  <label for="solucion">Posible solucion</label>
+                  <input type="text" class="form-control" id="solucion" formControlName="solucion" placeholder="Posible solucion">
+                  </div>
+      <br/>
+      <div>
+        <button
+        class="btn btn-primary m-2"
+        (click)="guardar()"
+        [disabled]="!datosIncidencia.valid"
+        
+       
+      >
+        Enviar
+      </button>
+      </div>
+  
+      
+      
+    </form>
+  </div>
