@@ -78,7 +78,7 @@ export class DetalleIncidenciaComponent implements OnInit {
   
       if (this.datosIncidencia.valid) {
         
-        this.incidenciasService.updateIncidencia(this.documentId, this.datosIncidencia).then(
+        this.incidenciasService.updateIncidencia("incidencias",this.documentId, this.dataIncidencia).then(
           () => {
             alert("Registro actualizado");
           },

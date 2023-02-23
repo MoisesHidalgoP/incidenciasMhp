@@ -13,6 +13,7 @@ const routes: Routes = [
 { path: 'gestionIncidencias', loadChildren: () => import('./componentes/gestion-incidencias/gestion-incidencias.module').then(m => m.GestionIncidenciasModule) },
 { path: 'incidencias', loadChildren: () => import('./componentes/incidencias/incidencias.module').then(m => m.IncidenciasModule) },
 { path: 'revisionIncidencias', loadChildren: () => import('./componentes/revision-incidencias/revision-incidencias.module').then(m => m.RevisionIncidenciasModule) },
+{ path: 'rol', loadChildren: () => import('./componentes/rol/rol.module').then(m => m.RolModule) },
 ];
 
 @NgModule({

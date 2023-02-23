@@ -26,9 +26,10 @@ export class IncidenciasService {
   }
 
   //Metodo que actualiza una incidencia 
-  updateIncidencia(documentId: string, data: any) {
-    return this.conexion.doc(documentId).update(data);
+  updateIncidencia(coleccion: string, documentId: string, data: any) {
+    return this.firebase.collection(coleccion).doc(documentId).update(data);
   }
+
 
   //Metodo que borra una incidencia
   deleteIncidencia(documentId: string){

@@ -13,6 +13,7 @@ export class GestionIncidenciasComponent implements OnInit {
   constructor(private incidenciasService: IncidenciasService) { }
 
   ngOnInit(): void {
+    this.getAll();
   }
 
 
