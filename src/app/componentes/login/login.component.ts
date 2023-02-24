@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       console.log(response)
       this.router.navigate(['/main']);
     })
-    .catch(error => console.log(error))
+    .catch(error => alert("Error, introduce un email y contraseña correctos"))
   }
 
   onClick(){
