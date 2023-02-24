@@ -35,7 +35,7 @@ export class IncidenciasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('hola soy formulario iincidencias');
+    console.log('hola soy formulario incidencias');
     this.ruta.params.subscribe( params => {
       if(params['id']){
         this.documentId = String(params['id']);

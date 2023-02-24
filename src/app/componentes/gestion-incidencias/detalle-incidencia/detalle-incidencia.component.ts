@@ -19,7 +19,7 @@ export class DetalleIncidenciaComponent implements OnInit {
     fecha: ['', Validators.required],
     lugar: ['', Validators.required],
     persona: ['', Validators.required],
-    responsable: ['', Validators.required],
+    responsable: ['',],
     solucion: ['', Validators.required]
   });
 
@@ -77,7 +77,7 @@ export class DetalleIncidenciaComponent implements OnInit {
       this.dataIncidencia = this.datosIncidencia.value;
   
       if (this.datosIncidencia.valid) {
-        
+        console.log("Estas entrado por aqui");
         this.incidenciasService.updateIncidencia("incidencias",this.documentId, this.dataIncidencia).then(
           () => {
             alert("Registro actualizado");

@@ -68,5 +68,10 @@ export class UsuarioService {
     return this.conexion.add(data);
   }
 
+   //Metodo que actualiza un portero
+   updateUsuario(documentId: string, data: any):any {
+    return this.conexion.doc(documentId).update(data);
+  }
+
  
 }

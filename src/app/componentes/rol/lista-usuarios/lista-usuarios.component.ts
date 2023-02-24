@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../../servicios/usuario.service';
 import { Location } from '@angular/common';
-import { IncidenciasService } from '../../../servicios/incidencias.service';
+
 
 @Component({
   selector: 'app-lista-usuarios',

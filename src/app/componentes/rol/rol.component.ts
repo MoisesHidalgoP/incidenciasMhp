@@ -54,8 +54,9 @@ export class RolComponent implements OnInit {
     this.incidencia = this.usuarioForm.value;
 
     if (this.usuarioForm.valid) {
-      
-      this.UsuarioService.update("usuarios",this.documentId, this.incidencia).then(
+      console.log("entra")
+      let id = (String)(this.route.snapshot.paramMap.get("documentId"));
+      this.UsuarioService.updateUsuario(id,this.usuarioForm.value).then(
         () => {
           alert("Usuario actualizado con exito");
         },
@@ -69,8 +70,6 @@ export class RolComponent implements OnInit {
       alert("Asegurese de que el campo del rol no está vacío o que este se encuentre entre el rango de números indicado.");
     }
   }
-
-
 
 
   deleteUser(){
